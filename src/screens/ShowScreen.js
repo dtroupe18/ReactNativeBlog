@@ -11,11 +11,23 @@ const ShowScreen = ({ navigation }) => {
 
     return (
         <View>
-            <Text>{blogPost.title}</Text>
+            <Text style={styles.title}>{blogPost.title}</Text>
+            <Text style={styles.content}>{blogPost.content}</Text>
         </View>
     );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    title: {
+        paddingHorizontal: 16,
+        fontSize: 20,
+        fontWeight: 'bold'
+    },
+    content: {
+        paddingHorizontal: 16,
+        fontSize: 18,
+        paddingTop: 8
+    }
+});
 
 export default ShowScreen;
